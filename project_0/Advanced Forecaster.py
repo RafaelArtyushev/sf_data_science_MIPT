@@ -96,8 +96,10 @@ def scorer(predictor) -> int:
         
     return (predictor.__name__, score)
 
+list_for_rank = [predictor_01_random_search, predictor_02_more_less, predictor_03_binary_search]
+results = map(lambda x: scorer(x), list_for_rank)
+results_dict = dict(results)
+print(results_dict)
 
-    
-#     # RUN
-# if __name__ == '__main__':
-#     scorer(predictor_01_random_search)
+
+ 
